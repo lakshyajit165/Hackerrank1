@@ -1,0 +1,100 @@
+#Class
+
+class Student{
+    int age,standard;
+    string fname,lname;
+    public:
+       void set_age(int a){
+           age=a;
+       }
+       void set_standard(int b){
+           standard=b;
+       }
+       void set_first_name(string s1){
+           fname= s1;
+       }
+       void set_last_name(string s2){
+           lname=s2;
+       }
+       int get_age(){
+           return age;
+       }
+       int get_standard(){
+           return standard;
+       }
+       string get_first_name(){
+           return fname;
+       }
+       string get_last_name(){
+           return lname;
+       }
+       /*void to_string(){
+           cout<<age<<","<<fname<<","<<lname<<","<<standard;
+       }*/
+};
+
+#Class ANd Objects'
+
+class Student{
+    int marks[10];
+    int tot=0;
+    public:
+      void input(){
+          for(int i=0;i<=4;i++)
+              cin>>marks[i];
+      } 
+      int calculateTotalScore(){
+          for(int i=0li<=4;i++)
+              tot+=marks[i]; 
+        return tot; 
+      }
+};
+
+#Box It!!
+
+class Box{  //Implement the class Box
+    
+  int l,b,h;//l,b,h are integers representing the dimensions of the box
+
+  public:// The class should have the following functions : 
+      // Constructors: 
+      Box(){ // Box();
+           l=b=h=0;
+       } 
+      Box(int length,int breadth,int height){ // Box(int,int,int);
+          l=length;
+          b=breadth;
+          h=height
+      }
+      Box(Box B){ // Box(Box);
+          l=B.l;
+          b=B.b;
+          h=B.h;
+      }
+      int getLength(){ // int getLength(); // Return box's length
+          return l;
+      }
+      int getBreadth(){ // int getBreadth (); // Return box's breadth
+          return b;
+      }
+      int getHeight(){  // int getHeight ();  //Return box's height
+          return h;
+      }
+      long long CalculateVolume(){ // long long CalculateVolume(); // Return the volume of the box
+          return l*b*h;
+      }
+     //Overload operator < as specified
+     Box operator<(Box& B){ //bool operator<(Box& b)
+         Box A;
+         if(A.l<B.l)
+             return(A<B);
+         else if((A.b<B.b)&&(A.l==B.l))
+               return(A<B);
+              else if((A.h<B.h)&&((A.b==B.b)&&(A.l==B.l)))
+                  return(A<B);
+     }
+    //Overload operator << as specified
+    Box operator<<(Box& B){  //ostream& operator<<(ostream& out, Box& B)
+        return(cout<<B.l<<" "<<B.b<<" "<<B.h);
+    }
+
