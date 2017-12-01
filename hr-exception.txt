@@ -1,0 +1,18 @@
+Server s;
+        try{
+            int x=s.compute();
+            cout<<x<<endl;
+        }
+        catch(range_error o)
+        {
+            cout<<"Not enough Memory";
+        }    
+         catch(Exception e)
+         {
+            cout<<"Exception:"<<e; 
+         } 
+         catch(...)
+         {
+             cout<<"Other Exception";
+         }    
+       
